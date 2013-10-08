@@ -1,0 +1,17 @@
+{
+	"name": "jjok/path-modifier",
+	"description": "Modify your include path.",
+	"license": "MIT",
+	"homepage": "https://github.com/jjok/PathModifier",
+	"authors": [{
+		"name": "Jonathan Jefferies",
+		"homepage": "http://jjok.co.uk",
+		"role": "Developer"
+	}],
+	"autoload": {
+		"psr-0": {"jjok\\PathModifier\\": "src/"}
+	},
+	"require": {
+		"php": ">=5.3.0"
+	}
+}
