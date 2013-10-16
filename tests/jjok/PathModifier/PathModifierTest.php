@@ -6,6 +6,10 @@ use jjok\PathModifier\PathModifier;
 
 class PathModiferTest extends PHPUnit_Framework_TestCase {
 	
+	/**
+	 * Restore the include path after each test.
+	 * @see PHPUnit_Framework_TestCase::tearDown()
+	 */
 	public function tearDown() {
 		restore_include_path();
 	}
@@ -30,16 +34,15 @@ class PathModiferTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function testPathCanBeRestored() {
 		$initial_path = get_include_path();
+		
 		PathModifier::set('my-path');
 		PathModifier::restore();
 		$this->assertSame($initial_path, get_include_path());
 	}
 	
-	/**
-	 * @covers jjok\PathModifier\PathModifier::append()
-	 */
 	public function testPathCanBeAppended() {
 		$initial_path = get_include_path();
+		
 		PathModifier::append('path1');
 		$this->assertSame(
 			$initial_path.PATH_SEPARATOR.'path1',
