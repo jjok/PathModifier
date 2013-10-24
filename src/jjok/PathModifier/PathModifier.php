@@ -3,7 +3,7 @@
 namespace jjok\PathModifier;
 
 /**
- * 
+ * Change your include path.
  * @author Jonathan Jefferies
  */
 class PathModifier {
@@ -33,7 +33,7 @@ class PathModifier {
 	}
 	
 	/**
-	 * 
+	 * Append the include path.
 	 * @param string $path the path to be added.
 	 * @param string $path,... More paths to be added.
 	 * @return boolean
@@ -45,7 +45,7 @@ class PathModifier {
 	}
 	
 	/**
-	 * 
+	 * Remove an item from the include path.
 	 * @param string $path The path to be removed.
 	 * @param string $path,... More paths to be removed.
 	 * @return boolean
@@ -58,6 +58,7 @@ class PathModifier {
 	
 	/**
 	 * Get the include path as an array.
+	 * @return string[]
 	 */
 	protected static function getArray() {
 		return explode(PATH_SEPARATOR, self::get());
