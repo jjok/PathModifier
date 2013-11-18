@@ -19,12 +19,12 @@ Set the include path, overwriting the current value.
 Append the current include path.
 
 	PathModifier::append('/my/new/path');
-	PathModifier::append('/my/new/path', '/my/new/path2');
+	PathModifier::append('/my/new/path2', '/my/new/path3');
 
 Remove a path.
 
-	PathModifier::remove('/my/new/path');
-	PathModifier::remove('/my/new/path', '/my/new/path2');
+	PathModifier::remove('/path/to/remove');
+	PathModifier::remove('/path/to/remove2', '/path/to/remove3');
 
 Restore the include path to its original value.
 
