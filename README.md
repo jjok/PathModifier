@@ -8,6 +8,8 @@ Change your include path.
 Examples
 --------
 
+	use jjok\PathModifier\PathModifier;
+
 Get the current include path.
 
 	PathModifier::get();
@@ -29,5 +31,6 @@ Remove a path.
 Restore the include path to its original value.
 
 	PathModifier::restore();
+
 
 Copyright (c) 2013 Jonathan Jefferies
